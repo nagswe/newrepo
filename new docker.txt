@@ -1,0 +1,60 @@
+DAY1
+
+docker					To verify if docker is installed
+apt install docker.io			To install docker package on Ubuntu
+docker ps				To list docker container (running only)
+docker ps -a				To list docker container (all containers)
+docker pull ubuntu			To pull docker images
+docker images				To list docker images
+docker create --name ubuntu01 ubuntu	To create a container using ubuntu image with custom name
+docker create ubuntu			To cretae a container using ubuntu image without custom name
+docker start dreamy_liskov		To start container with name
+docker start 5706093ca838		To start a container with id (get the id using docker ps -a_)
+docker pull alpine			To pull alpine image
+docker run -itd --name ubuntu03 ubuntu	To start a container with foreground process
+docker exec -it ubuntu03 /bin/bash	To login to container
+docker history ubuntu			To see the layers of an image
+
+DAY2
+
+docker inspect container name
+docker image inspect containerid
+docker network ls
+docker volume ls
+docker network inspect bridge
+docker volume inspect volume name
+docker start container id
+docker stop container id
+docker ps -a -q is command used for filter the containers
+docker start $(docker ps -a -q)
+docker stop $(docker ps -a -q)
+docker rm $(docker ps -a -q)
+standard port numbers
+docker pull nginx
+docker create --name web1 nginx
+docker start web01
+docker ps
+docker inspect web01
+docker inspect web01 | grep -i "IPAddress"
+ifconfig
+docker pull httpd
+docker run -itd --name httpd01 -p9090:80 httpd
+docker run -d -p 60:80 --name webo1 nginx
+docker run 
+
+
+docker login
+vi Dockerfile
+FROM ubuntu
+RUN echo "Run one"
+RUN echo "Run two"
+CMD echo "Echo from image"
+CMD echo "Echo from latest"
+RUN echo "Run Three"
+docker images
+docker build -t myfirstimg .
+docker tag myfirstimage nagswe/myfirstimage
+docker push nagswe/myfirstimage
+Nagswe@123
+
+172.17.0.1
