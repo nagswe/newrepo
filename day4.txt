@@ -1,0 +1,22 @@
+Docker volumes
+
+docker stats
+docker run -itd --name web100 -p 1000:80 centos
+docker update --memory-swap "500m" --memory "400m" container name
+docker update --cpu-shares 512 web100
+docker info
+docker rename web100 web300
+docker port web300
+docker logs web300
+docker exec -it web300 /bin/bash
+ls
+touch 1 2 3 4 5 6 7 8 test.txt
+ls
+exit
+docker diff web300
+mv file1.txt Nagesh.txt
+
+
+
+
+
